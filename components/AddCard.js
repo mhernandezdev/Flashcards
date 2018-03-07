@@ -26,7 +26,6 @@ class AddCard extends Component {
         const { question, answer } = this.state;
         if(question==='' || answer===''){
             Alert.alert('Submit Error', 'Question and answer must be entered', [{text: 'OK'}], { cancelable:false });
-
         }else{
             const { decks, navigation } = this.props;
             const { key } = navigation.state.params;

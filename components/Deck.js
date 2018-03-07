@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
-import { View, Text } from 'react-native'
+import { View, Text, Alert } from 'react-native'
 import Button from './Button'
 import Card from './Card'
 import styles from '../utils/styles'
@@ -26,9 +26,18 @@ class Deck extends Component {
     }
 
     deleteBtnPressed = () => {
+        Alert.alert(
+            'Delete Deck',
+            'Are you sure you want to delete this deck.',
+            [
+                {text: 'Yes',  onPress:this.deleteDeck },
+                {text: 'Cancel'}
+            ],
+            { cancelable:false }
+        );
+    }
 
-        // TODO get confirmation of delete // modal window
-
+    deleteDeck = () => {
         const { navigation } = this.props;
         const { key } = navigation.state.params;
         this.props.navigation.goBack();

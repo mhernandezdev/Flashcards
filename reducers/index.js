@@ -9,10 +9,6 @@ import { GET_DECKS, ADD_DECK, DELETE_DECK, CLEAR_DECKS, ADD_CARD } from '../acti
         {
           question: 'What is React?',
           answer: 'A library for managing user interfaces'
-        },
-        {
-          question: 'Where do you make Ajax requests in React?',
-          answer: 'The componentDidMount lifecycle event'
         }
       ]
     }
@@ -49,7 +45,15 @@ export function decks (state = {}, {type, data}) {
           return state
       }
 }
-
+export function loading (state = { completed:false }, {type, data}) {
+    switch (type) {
+        case GET_DECKS :
+            return {...state, completed:true }
+        default :
+          return state
+    }
+}
 export default combineReducers({
-    decks
+    decks,
+    loading
 })

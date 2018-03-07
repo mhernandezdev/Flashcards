@@ -14,7 +14,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation'
 
 import { orange, white, lightgray } from '../utils/styles'
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
-import { Constants } from 'expo'
+import { Constants, AppLoading } from 'expo'
 
 import { setLocalNotification } from '../utils/notifications'
 
@@ -114,14 +114,23 @@ class AppView extends Component {
     }
 
     render() {
+        const { loading } = this.props;
         return (
             <View style={ {flex: 1} }>
                 <AppStatusBar backgroundColor={ orange } barStyle="light-content" />
-                <AppNavigator />
+                {
+                    !loading.completed &&
+                    <AppLoading /> ||
+                    <AppNavigator />
+                }
             </View>
         )
     }
 
+}
+
+function mapStateToProps ({ loading }) {
+    return { loading };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -129,6 +138,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(AppView)
