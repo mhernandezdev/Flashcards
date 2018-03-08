@@ -156,7 +156,7 @@ class Quiz extends Component {
         });
 
         return (
-            <ScrollView style={[styles.appBackground, {flex:1} ]} ref={(c) => { this.scrollView = c; }}>
+            <ScrollView style={[styles.appBackground, {flex:1} ]} ref={(c) => { this.scrollView = c }}>
 
                 <View style={[{flex: 1, minHeight:height*.6}]}>
                     <View style={[ styles.container, {flex: 0} ]}>
@@ -219,7 +219,7 @@ class Quiz extends Component {
                     </View>
 
                     {/* Restart Quiz' and 'Back to Deck */}
-                    {btnsOpacity===0 && <View style={[ {position:'absolute', width:'100%'}, styles.center, {justifyContent:'space-around'} ]}>
+                    {btnsOpacity===0 && <View style={[ styles.quizCompletedBtns, styles.center ]}>
                         <Button label="Back to deck" onPress={ this.backPresed } />
                         <Button label="Restart Quiz" onPress={ this.restartPressed } />
                     </View> }

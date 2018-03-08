@@ -152,7 +152,7 @@ export default StyleSheet.create({
         borderRadius: 22,
         marginBottom:10,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     btnCircleCorrect:{
         backgroundColor:green
@@ -160,12 +160,17 @@ export default StyleSheet.create({
     btnCircleIncorrect:{
         backgroundColor:gray
     },
+    quizCompletedBtns:{
+        position:'absolute',
+        width:'100%',
+        left:20
+    },
     callout:{
         backgroundColor: blue,
         borderRadius:10,
         padding: 15,
         color:white,
-        fontSize: 18,
+        fontSize: 18
     },
     bold:{
         fontWeight:'bold'
