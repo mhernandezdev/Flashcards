@@ -46,6 +46,7 @@ class AddDeck extends Component {
                 <View style={styles.stretchSelf}>
                     <TextInput
                     style={ styles.input }
+                    maxLength={ 50 }
                     placeholder={ 'Enter a deck title' }
                     value={ title }
                     onChangeText={ this.handleTextChange }
