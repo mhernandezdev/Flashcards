@@ -20,6 +20,7 @@ Install the Expo client app on your iOS or Android device. The device needs to b
 `yarn install`
 
 `yarn start`
+
 Runs your app in development mode. Using the Expo app, scan the QR code from your terminal to open your project.
 
 

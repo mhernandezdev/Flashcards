@@ -21,7 +21,6 @@ class Quiz extends Component {
 
         scale:new Animated.Value(1),
         nextCardOpacity:new Animated.Value(0),
-        nextCardMarg:new Animated.Value(60),
         nextCardDrag: new Animated.ValueXY()
     }
 
@@ -197,7 +196,9 @@ class Quiz extends Component {
 
                     <View style={[ {flex:1, backgroundColor:lightgray, opacity:btnsOpacity } ]}>
                         <View style={ styles.center }>
-                            <Button label={display==='question' ? 'Show Answers' : 'Show Question' } onPress={ this.answerPressed } />
+                            <Button
+                            label={display==='question' ? 'Show Answers' : 'Show Question' }
+                            onPress={ this.answerPressed } />
                         </View>
 
                         <View style={ [styles.flexRow] }>
