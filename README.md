@@ -1,6 +1,6 @@
 ## Flashcards
 
-React Native Flashcards project: App that allows users to create decks of flashcards to quiz themselves.
+React Native Flashcards project: App to create decks of flashcards and quiz yourself.
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app). You can find more information on how to perform common tasks [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
